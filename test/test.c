@@ -32,3 +32,29 @@ CTEST(INPUT_SIMPLE_WORD, THIRD_TEST)
     ASSERT_EQUAL(expected,result);
 }
 
+CTEST(INPUT_PARTICIPLE_WORD, FIRST_TEST)
+{
+    char* word = "cut";
+    char* filename = "test.txt";
+    int result = input_participle_word(word, filename);
+    int expected = 1;
+    ASSERT_EQUAL(expected,result);
+}
+
+CTEST(INPUT_PARTICIPLE_WORD, SECOND_TEST)
+{
+    char* word = "cat";
+    char* filename = "test.txt";
+    int result = input_participle_word(word, filename);
+    int expected = 0;
+    ASSERT_EQUAL(expected,result);
+}
+
+CTEST(INPUT_PARTICIPLE_WORD, THIRD_TEST)
+{
+    char* word = "under_tree";
+    char* filename = "test.txt";
+    int result = input_participle_word(word, filename);
+    int expected = 0;
+    ASSERT_EQUAL(expected,result);
+}
