@@ -1,57 +1,60 @@
-#include "../src/function.h"
-#define CATCH_CONFIG_MAIN
-#include "../thirdparty/catch.hpp"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <function.h>
+#include <ctest.h>
 
-TEST_CASE("Past Simple form is guessed")
+CTEST(INPUT_SIMPLE_WORD, FIRST_TEST)
 {
     char* word = "cut";
     char* filename = "test.txt";
     int result = input_simple_word(word, filename);
-    int expected_simple = 1;
-    REQUIRE(expected_simple == result);
+    int expected = 1;
+    ASSERT_EQUAL(expected,result);
 }
 
-TEST_CASE("Past Simple form isn't guessed �1")
+CTEST(INPUT_SIMPLE_WORD, SECOND_TEST)
 {
     char* word = "chaos";
     char* filename = "test.txt";
     int result = input_simple_word(word, filename);
-    int expected_simple = 0;
-    REQUIRE(expected_simple == result);
+    int expected = 0;
+    ASSERT_EQUAL(expected,result);
 }
 
-TEST_CASE("Past Simple form isn't guessed �2")
+CTEST(INPUT_SIMPLE_WORD, THIRD_TEST)
 {
-    char* word = "random_ch@r@ct3r5";
+    char* word = "random2@";
     char* filename = "test.txt";
     int result = input_simple_word(word, filename);
-    int expected_simple = 0;
-    REQUIRE(expected_simple == result);
+    int expected = 0;
+    ASSERT_EQUAL(expected,result);
 }
 
-TEST_CASE("Past Participle form is guessed")
+CTEST(INPUT_PARTICIPLE_WORD, FIRST_TEST)
 {
     char* word = "cut";
     char* filename = "test.txt";
     int result = input_participle_word(word, filename);
-    int expected_participle = 1;
-    REQUIRE(expected_participle == result);
+    int expected = 1;
+    ASSERT_EQUAL(expected,result);
 }
 
-TEST_CASE("Past Participle form isn't guessed �1")
+CTEST(INPUT_PARTICIPLE_WORD, SECOND_TEST)
 {
     char* word = "cat";
     char* filename = "test.txt";
     int result = input_participle_word(word, filename);
-    int expected_participle = 0;
-    REQUIRE(expected_participle == result);
+    int expected = 0;
+    ASSERT_EQUAL(expected,result);
 }
 
-TEST_CASE("Past Participle form isn't' guessed �2")
+CTEST(INPUT_PARTICIPLE_WORD, THIRD_TEST)
 {
-    char* word = "unexpectable_word";
+    char* word = "under_tree";
     char* filename = "test.txt";
     int result = input_participle_word(word, filename);
-    int expected_participle = 0;
-    REQUIRE(expected_participle == result);
+    int expected = 0;
+    ASSERT_EQUAL(expected,result);
 }
