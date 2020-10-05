@@ -99,3 +99,34 @@ int input_simple_word(char *simp, char *filename)
         return 0;
     }
 }
+
+int input_participle_word(char *part, char *filename)
+{
+    char ch, sl[100];
+    int word = 0, i = 0, c = 0, t = 0;
+    FILE* pr;
+    pr = fopen(filename, "r");
+    if (pr == NULL) {
+        perror("Error opening file");
+        return -1;
+    }
+    while ((ch = getc(pr)) != EOF) {
+        if (ch == ' ')
+            word++;
+        if (word == 2 && ch != ' ' && ch != '\n') {
+            sl[i] = ch;
+            i++;
+        }
+    }
+    
+    for (t = 0; t < i; t++) {
+        if (sl[t] == part[t])
+            c++;
+    }
+    fclose(pr);
+    if (c == i) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
