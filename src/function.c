@@ -130,3 +130,33 @@ int input_participle_word(char *part, char *filename)
         return 0;
     }
 }
+
+int correct()
+{
+	char simple_word;
+	printf("Past Simple: ");
+	scanf("%s", &simple_word);
+	char* simp = &simple_word;
+	int simple = input_simple_word(simp, "verbs.txt");
+	
+	char participle_word;
+	printf("Past Participle: ");
+	scanf("%s", &participle_word);
+	char* part = &participle_word;
+	int participle = input_participle_word(part, "verbs.txt");
+	
+	printf("\n =========================== \n");
+	printf("Past Simple: ");
+	if (simple == 1) {
+		printf("correct \n");
+	} else {
+		printf("uncorrect \n");
+	}
+	printf("Past Participle: ");
+	if (participle == 1) {
+		printf("correct \n");
+	} else {
+		printf("uncorrect");
+	}
+	return 0;
+}

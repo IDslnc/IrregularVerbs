@@ -10,6 +10,7 @@ int main()
     do {
         genering_word();
         output_inf_word();
+		correct();
         printf("\n End? y/n \n");
         scanf("%s", &ch);
     } while (ch != 'y');
