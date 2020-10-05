@@ -6,6 +6,6 @@
 #include <time.h>
 
 int genering_word();
-
+int output_inf_word();
 
 #endif

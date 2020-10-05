@@ -47,3 +47,24 @@ int genering_word()
     return 0;
 }
 
+int output_inf_word()
+{
+    char ch;
+    int word = 0;
+    FILE* pr;
+    pr = fopen("verbs.txt", "r");
+    if (pr == NULL) {
+        perror("Error opening verbs file");
+        return -1;
+    }
+    printf("Infinitive: ");
+    while ((ch = fgetc(pr)) != EOF) {
+        if (ch == ' ')
+            word++;
+        if (word == 0)
+            printf("%c", ch);
+    }
+    printf("\n");
+    fclose(pr);
+    return 0;
+}
