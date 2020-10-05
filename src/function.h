@@ -7,5 +7,6 @@
 
 int genering_word();
 int output_inf_word();
+int input_simple_word(char *simp, char *filename);
 
 #endif
