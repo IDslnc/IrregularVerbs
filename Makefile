@@ -14,7 +14,7 @@ run:
 clean:
 	rm -f build/src/*.o
 	rm -f bin/main
-	rm -f src/*.txt
+	rm -f verbs.txt
 
 checkdir:
 	mkdir -p bin build build/test build/src
