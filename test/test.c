@@ -1,9 +1,9 @@
+#include <ctest.h>
+#include <function.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include <function.h>
-#include <ctest.h>
 
 CTEST(INPUT_SIMPLE_WORD, FIRST_TEST)
 {
@@ -11,7 +11,7 @@ CTEST(INPUT_SIMPLE_WORD, FIRST_TEST)
     char* filename = "test.txt";
     int result = input_simple_word(word, filename);
     int expected = 1;
-    ASSERT_EQUAL(expected,result);
+    ASSERT_EQUAL(expected, result);
 }
 
 CTEST(INPUT_SIMPLE_WORD, SECOND_TEST)
@@ -20,7 +20,7 @@ CTEST(INPUT_SIMPLE_WORD, SECOND_TEST)
     char* filename = "test.txt";
     int result = input_simple_word(word, filename);
     int expected = 0;
-    ASSERT_EQUAL(expected,result);
+    ASSERT_EQUAL(expected, result);
 }
 
 CTEST(INPUT_SIMPLE_WORD, THIRD_TEST)
@@ -29,7 +29,7 @@ CTEST(INPUT_SIMPLE_WORD, THIRD_TEST)
     char* filename = "test.txt";
     int result = input_simple_word(word, filename);
     int expected = 0;
-    ASSERT_EQUAL(expected,result);
+    ASSERT_EQUAL(expected, result);
 }
 
 CTEST(INPUT_PARTICIPLE_WORD, FIRST_TEST)
@@ -38,7 +38,7 @@ CTEST(INPUT_PARTICIPLE_WORD, FIRST_TEST)
     char* filename = "test.txt";
     int result = input_participle_word(word, filename);
     int expected = 1;
-    ASSERT_EQUAL(expected,result);
+    ASSERT_EQUAL(expected, result);
 }
 
 CTEST(INPUT_PARTICIPLE_WORD, SECOND_TEST)
@@ -47,7 +47,7 @@ CTEST(INPUT_PARTICIPLE_WORD, SECOND_TEST)
     char* filename = "test.txt";
     int result = input_participle_word(word, filename);
     int expected = 0;
-    ASSERT_EQUAL(expected,result);
+    ASSERT_EQUAL(expected, result);
 }
 
 CTEST(INPUT_PARTICIPLE_WORD, THIRD_TEST)
@@ -56,5 +56,5 @@ CTEST(INPUT_PARTICIPLE_WORD, THIRD_TEST)
     char* filename = "test.txt";
     int result = input_participle_word(word, filename);
     int expected = 0;
-    ASSERT_EQUAL(expected,result);
+    ASSERT_EQUAL(expected, result);
 }
