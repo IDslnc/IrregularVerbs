@@ -1,8 +1,8 @@
+#include "function.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include "function.h"
 
 int main()
 {
@@ -10,7 +10,7 @@ int main()
     do {
         genering_word();
         output_inf_word();
-		correct();
+        correct();
         printf("\n End? y/n \n");
         scanf("%s", &ch);
     } while (ch != 'y');

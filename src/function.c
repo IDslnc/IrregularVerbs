@@ -1,8 +1,8 @@
+#include "function.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include "function.h"
 
 int genering_word()
 {
@@ -69,7 +69,7 @@ int output_inf_word()
     return 0;
 }
 
-int input_simple_word(char *simp, char *filename)
+int input_simple_word(char* simp, char* filename)
 {
     char ch, sl1[100];
     int word = 0, i = 0, c = 0, t = 0;
@@ -87,7 +87,7 @@ int input_simple_word(char *simp, char *filename)
             i++;
         }
     }
-    
+
     for (t = 0; t < i; t++) {
         if (sl1[t] == simp[t])
             c++;
@@ -100,7 +100,7 @@ int input_simple_word(char *simp, char *filename)
     }
 }
 
-int input_participle_word(char *part, char *filename)
+int input_participle_word(char* part, char* filename)
 {
     char ch, sl[100];
     int word = 0, i = 0, c = 0, t = 0;
@@ -118,7 +118,7 @@ int input_participle_word(char *part, char *filename)
             i++;
         }
     }
-    
+
     for (t = 0; t < i; t++) {
         if (sl[t] == part[t])
             c++;
@@ -133,30 +133,30 @@ int input_participle_word(char *part, char *filename)
 
 int correct()
 {
-	char simple_word;
-	printf("Past Simple: ");
-	scanf("%s", &simple_word);
-	char* simp = &simple_word;
-	int simple = input_simple_word(simp, "verbs.txt");
-	
-	char participle_word;
-	printf("Past Participle: ");
-	scanf("%s", &participle_word);
-	char* part = &participle_word;
-	int participle = input_participle_word(part, "verbs.txt");
-	
-	printf("\n =========================== \n");
-	printf("Past Simple: ");
-	if (simple == 1) {
-		printf("correct \n");
-	} else {
-		printf("uncorrect \n");
-	}
-	printf("Past Participle: ");
-	if (participle == 1) {
-		printf("correct \n");
-	} else {
-		printf("uncorrect");
-	}
-	return 0;
+    char simple_word;
+    printf("Past Simple: ");
+    scanf("%s", &simple_word);
+    char* simp = &simple_word;
+    int simple = input_simple_word(simp, "verbs.txt");
+
+    char participle_word;
+    printf("Past Participle: ");
+    scanf("%s", &participle_word);
+    char* part = &participle_word;
+    int participle = input_participle_word(part, "verbs.txt");
+
+    printf("\n =========================== \n");
+    printf("Past Simple: ");
+    if (simple == 1) {
+        printf("correct \n");
+    } else {
+        printf("uncorrect \n");
+    }
+    printf("Past Participle: ");
+    if (participle == 1) {
+        printf("correct \n");
+    } else {
+        printf("uncorrect");
+    }
+    return 0;
 }
