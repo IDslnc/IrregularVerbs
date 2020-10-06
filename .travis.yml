@@ -6,6 +6,3 @@ dist: xenial
 script:
   - git ls-files src/
   - make
-  - make run
-  - make test
-  - make testing
