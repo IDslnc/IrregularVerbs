@@ -7,6 +7,7 @@
 int main()
 {
     char ch;
+    printf("Please input lower words symbols \n");
     do {
         genering_word();
         output_inf_word();
